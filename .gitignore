@@ -1,0 +1,35 @@
+# Root gitignore for Tena project
+# Ignore dependencies
+**/node_modules/
+**/vendor/
+
+# Ignore Next.js build output
+**/out/
+**/.next/
+
+# Ignore env files
+**/.env
+**/.env.local
+**/.env.production
+**/.env.*.local
+
+# Ignore logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignore system/IDE files
+.DS_Store
+Thumbs.db
+**/.idea/
+**/.vscode/
+
+# Ignore build artifacts
+**/dist/
+**/build/
+*.tsbuildinfo
+
+# Ignore legacy and template archive folders
+/legacy_archive/
+/template-to-be-repurposed/

@@ -1,0 +1,32 @@
+<?php
+
+namespace App\Http\Resources;
+
+use Illuminate\Http\Request;
+use Illuminate\Http\Resources\Json\JsonResource;
+
+class ServiceResource extends JsonResource
+{
+    public function toArray(Request $request): array
+    {
+        return [
+            'id' => $this->id,
+            'title' => $this->title,
+            'slug' => $this->slug,
+            'category' => $this->category,
+            'pillar_id' => $this->pillar_id,
+            'pillar' => new PillarResource($this->whenLoaded('pillar')),
+            'description' => $this->description,
+            'content' => $this->content,
+            'icon' => $this->icon,
+            'image' => $this->image,
+            'price' => $this->price,
+            'suited_for' => $this->suited_for,
+            'expected_results' => $this->expected_results,
+            'paystack_plan_id' => $this->paystack_plan_id,
+            'is_active' => (bool) $this->is_active,
+            'created_at' => $this->created_at,
+            'updated_at' => $this->updated_at,
+        ];
+    }
+}
