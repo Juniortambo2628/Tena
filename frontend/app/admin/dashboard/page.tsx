@@ -4,8 +4,8 @@ import React from 'react'
 import AdminLayout from '@/components/admin/AdminLayout'
 import { useApi } from '@/hooks/use-api'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card'
-import { Eye, Users, TrendingUp, Globe, Clock, ExternalLink } from 'lucide-react'
-import { AreaChart, Area, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts'
+import { Eye, Users, TrendingUp, Globe, Clock, ExternalLink, MessageSquare } from 'lucide-react'
+import { AreaChart, Area, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts'
 
 const AdminDashboardPage = () => {
     const { data: analytics, isLoading } = useApi('/analytics/summary')
