@@ -28,7 +28,7 @@ export default function PackageDetailPage() {
     const { slug } = useParams()
     const router = useRouter()
     const { toast } = useToast()
-    const { data: service, isLoading, error } = useApi<any>(slug ? `/services/${slug}` : null)
+    const { data: service, isLoading, isError: error } = useApi<any>(slug ? `/services/${slug}` : null)
     const [scrolled, setScrolled] = useState(false)
 
     useEffect(() => {
