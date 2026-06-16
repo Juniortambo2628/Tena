@@ -1,0 +1,13 @@
+---
+deployment:
+  tasks:
+    - export COREPATH=/home/zhpebukm/tena-core
+    - export PUBLICPATH=/home/zhpebukm/tena.okjtech.co.ke/api
+    - /bin/mkdir -p $COREPATH
+    - /bin/mkdir -p $PUBLICPATH
+    - /bin/cp -R backend/* $COREPATH/
+    - /bin/cp backend/.env.production $COREPATH/.env
+    - /bin/cp -R backend/public/* $PUBLICPATH/
+    - /bin/cp backend/public/.htaccess $PUBLICPATH/.htaccess
+    - /bin/chmod -R 775 $COREPATH/storage
+    - /bin/chmod -R 775 $COREPATH/bootstrap/cache
