@@ -8,7 +8,7 @@ define('LARAVEL_START', microtime(true));
 $corePath = __DIR__.'/..';
 if (isset($_SERVER['DOCUMENT_ROOT']) && strpos($_SERVER['DOCUMENT_ROOT'], 'tena.okjtech.co.ke') !== false) {
     $corePath = '/home/zhpebukm/tena-core';
-} elseif (isset($_SERVER['HTTP_HOST']) && strpos($_SERVER['HTTP_HOST'], 'api-dntwed.okjtech.co.ke') !== false) {
+} elseif (isset($_SERVER['HTTP_HOST']) && strpos($_SERVER['HTTP_HOST'], 'api-tena.okjtech.co.ke') !== false) {
     $corePath = '/home/zhpebukm/tena-core';
 }
 
