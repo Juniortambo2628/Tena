@@ -6,9 +6,9 @@ define('LARAVEL_START', microtime(true));
 
 // Dynamically determine the core path based on environment
 $corePath = __DIR__.'/..';
-if (isset($_SERVER['DOCUMENT_ROOT']) && strpos($_SERVER['DOCUMENT_ROOT'], 'tena.okjtech.co.ke') !== false) {
+if (isset($_SERVER['DOCUMENT_ROOT']) && (strpos($_SERVER['DOCUMENT_ROOT'], 'tena.okjtech.co.ke') !== false || strpos($_SERVER['DOCUMENT_ROOT'], 'tena.host') !== false)) {
     $corePath = '/home/zhpebukm/tena-core';
-} elseif (isset($_SERVER['HTTP_HOST']) && strpos($_SERVER['HTTP_HOST'], 'api-tena.okjtech.co.ke') !== false) {
+} elseif (isset($_SERVER['HTTP_HOST']) && (strpos($_SERVER['HTTP_HOST'], 'api-tena.okjtech.co.ke') !== false || strpos($_SERVER['HTTP_HOST'], 'api.tena.host') !== false)) {
     $corePath = '/home/zhpebukm/tena-core';
 }
 

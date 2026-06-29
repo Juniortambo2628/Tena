@@ -22,6 +22,18 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'api.nissi-insights.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'tena.host',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.tena.host',
+      },
+      {
+        protocol: 'https',
+        hostname: 'api-tena.okjtech.co.ke',
+      },
     ],
   },
 };
